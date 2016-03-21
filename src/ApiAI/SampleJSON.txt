@@ -1,0 +1,41 @@
+{
+  "id": "cfcbd337-6b66-4393-a6a3-74fc5487cedb",
+  "timestamp": "2016-02-16T00:30:13.529Z",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "hi my name is Sam",
+    "score" : 5,
+    "action": "greetings",
+    "actionIncomplete": false,
+    "parameters": {
+      "name": "Sam"
+    },
+    "contexts": [
+      {
+        "name": "user_name",
+        "parameters": {
+          "name": "Sam"
+        },
+        "lifespan": 5
+      },
+      {
+        "name": "greetings",
+        "parameters": {
+          "name": "Sam"
+        },
+        "lifespan": 5
+      }
+    ],
+    "metadata": {
+      "intentId": "c251ef97-0c43-404d-bf75-98e806f942be",
+      "intentName": "Greetings"
+    },
+    "fulfillment": {
+      "speech": "Hi Sam! How can I help you?"
+    }
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  }
+}
