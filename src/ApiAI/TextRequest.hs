@@ -6,10 +6,15 @@
 module ApiAI.TextRequest where
 
 import ApiAI.Response
+import Control.Lens hiding (contexts, Context)
 import Data.Aeson
+import qualified Data.ByteString.Char8 as C
+import Data.ByteString.Lazy.Internal
+import Data.ByteString.Lazy
 import Data.Scientific
-import Network.Http.Client
-import Network.HTTP.Headers
+import qualified Data.Text as T
+import Network.Wreq
+import Data.Aeson (object, (.=), encode)
 
 baseURL = "https://api.api.ai/v1/query?"
 
@@ -26,12 +31,24 @@ data TextRequest = TextRequest { query :: String
                                , v :: String
                                , confidence :: Maybe Scientific
                                , sessionId :: String
-                               , lang : String
-                               , contexts :: Maybe [Context]
-                               , resetContext :: Bool
+                               , lang :: String
+                               , context :: Maybe [Context]
+                               , resetContext :: Maybe Bool
                                , entities :: Maybe[String]
                                , timezone :: Maybe String
                                }
+
+myRequest :: TextRequest
+myRequest = TextRequest { query = "What is your name?", 
+                          v = "20150910", 
+                          confidence = Nothing, 
+                          sessionId = "1234567890", 
+                          lang = "en", 
+                          context = Nothing, 
+                          resetContext = Nothing, 
+                          entities = Nothing, 
+                          timezone = Nothing
+                        }
 
 processTextRequest :: TextRequest -> String
 processTextRequest textRequest = "query=" ++ (query textRequest) ++ "&"
@@ -44,16 +61,18 @@ client token key = Client { accessToken = token
                           , subscriptionKey = key
                           }
 
+buildAIRequest :: Client -> TextRequest -> Options
+buildAIRequest client textRequest = defaults & header "Authorization"                 .~ [C.pack $ "Bearer " ++ (accessToken client)] 
+                                           & header "ocp-apim-subscription-key"       .~ [C.pack $ subscriptionKey client] 
+                                           & param  "query"                           .~ [T.pack $ query textRequest]
+                                           & param  "v"                               .~ [T.pack $ v textRequest]
+                                           & param  "sessionId"                       .~ [T.pack $ sessionId textRequest]
+                                           & param  "lang"                            .~ [T.pack $ lang textRequest]
+
+parseAIResponse :: Response ByteString -> AIResponse
+parseAIResponse x = error "TO DO"
+
 withClient :: Client -> TextRequest -> IO AIResponse
 withClient client textRequest = do
-        
-        withConnection (openConnection "api.api.ai" 80) $ (\c -> do
-        let aiRequest = buildRequest1 (do
-                          http GET (processTextRequest TextRequest)
-                          setHeader "Authorization" ("Bearer " ++ (accessToken client))
-                          setHeader "ocp-apim-subscription-key" (subscriptionKey client) )
-        sendRequest c aiRequest emptyBody
-        return "blah")
-
-
-main = do
+                      r <- getWith (buildAIRequest client textRequest) baseURL
+                      return (parseAIResponse r)
