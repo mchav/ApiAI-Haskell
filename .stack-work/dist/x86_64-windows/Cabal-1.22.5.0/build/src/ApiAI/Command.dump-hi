@@ -1,21 +1,21 @@
 
 ==================== FINAL INTERFACE ====================
-2016-05-02 04:14:26.7746956 UTC
+2016-05-02 04:14:24.3294558 UTC
 
-interface main@main:Main 7103
-  interface hash: cfec5e7cfa2bfd17374124b448798262
-  ABI hash: 4477dd2ab195ecb8a905e1271688f1b2
-  export-list hash: 2f858fc153bc41d8df7e10c433d8b7d6
+interface ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.Command 7103
+  interface hash: c55601b298d541b369355c09599d7c62
+  ABI hash: d43e8f735979d8f9458ab01fdfabc34b
+  export-list hash: 3f933ff0e518cc50874c5e10a5a698b9
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: 21643f26d0b21e89505af06b6c010083
+  flag hash: a5168fbb809e1207ebc2807628781641
   sig of: Nothing
   used TH splices: False
   where
 exports:
-  Main.main
-module dependencies:
-package dependencies: ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy
-                      RSA-2.2.0@RSA_3U8sjHt7X6t2nctk1xSLNR
+  ApiAI.Command.toCommand
+  ApiAI.Command.Command{ApiAI.Command.Command}
+module dependencies: ApiAI.Response ApiAI.TextRequest
+package dependencies: RSA-2.2.0@RSA_3U8sjHt7X6t2nctk1xSLNR
                       SHA-1.6.4.2@SHA_1Ie52ZlfV7U5JkpNNWW6Sr
                       StateVar-1.1.0.3@State_8WYLUQJECQz8PFb9p2aPSq
                       Win32-2.3.1.0@Win32_ELFLzTRksT8Dql3wobiWvb
@@ -180,45 +180,114 @@ family instance modules: ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.Respon
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
                          vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
                          zlib-0.6.1.1@zlib_7LjT7TSHX8U3VTy3t378Vu:Codec.Compression.Zlib.Stream
-import  -/  ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI fc3c134b400661f8505f9d2d93fa3330
-import  -/  ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.Command d43e8f735979d8f9458ab01fdfabc34b
-import  -/  ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.TextRequest 50b7c4a77ec04e36762e6a3019b2b998
+import  -/  ApiAI.Response 9da422a22c3595b3e6801f2ecb5b1f11
+  exports: 0fcf797c78d7b87b28e0a275f90b7ae5
+  AIResponse 0ce6c3c295624d238d13fa88bb760e4d
+  action 2bcd29c84cc46ecd8c3625faf5a95794
+  result 7f895ba67fce17ffc7cbf5bf73d3e059
+import  -/  ApiAI.TextRequest 50b7c4a77ec04e36762e6a3019b2b998
+  exports: f6d05ad171c6005f3916400655b71b2f
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
-import  -/  base-4.8.2.0:System.IO 638c10c4fd4901a0aca5b77c9f14123d
-import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-81829bc4e0e9304a0c0106a9957acabf
-  main :: GHC.Types.IO ()
-  {- Arity: 1, Strictness: <L,U>,
-     Unfolding: InlineRule (0, True, True)
-                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-fde227ca4bb8a587872a253afedd605f
-  main1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <L,U>,
-     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
-                 case ApiAI.TextRequest.withClient1
-                        ApiAI.TextRequest.testClient
-                        ApiAI.TextRequest.myRequest
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 GHC.IO.Handle.Text.hPutStr2
-                   GHC.IO.Handle.FD.stdout
-                   (ApiAI.Command.$w$cshowsPrec
-                      0
-                      (case ipv1 of wild { ApiAI.Response.AIResponse ds2 ds3 ds4 ds5 ->
-                       case ds4 of wild1 { ApiAI.Response.AIResult ds7 ds8 ds9 ds10 ds6 ds13 ds11 ds12 ds14 ->
-                       ds10 } })
-                      (GHC.Types.[] @ GHC.Types.Char))
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+964b4b78bcdcd005272fc99a5a01c8f8
+  $fShowCommand :: GHC.Show.Show ApiAI.Command.Command
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ApiAI.Command.Command
+                  ApiAI.Command.$fShowCommand_$cshowsPrec
+                  ApiAI.Command.$fShowCommand_$cshow
+                  ApiAI.Command.$fShowCommand_$cshowList -}
+964b4b78bcdcd005272fc99a5a01c8f8
+  $fShowCommand1 :: ApiAI.Command.Command -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: ApiAI.Command.Command w1 :: GHC.Base.String ->
+                 case w of ww { ApiAI.Command.Command ww1 ->
+                 ApiAI.Command.$w$cshowsPrec 0 ww1 w1 }) -}
+45141a540f1100ef91a4d34e79f767d0
+  $fShowCommand2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Command "#) -}
+964b4b78bcdcd005272fc99a5a01c8f8
+  $fShowCommand_$cshow :: ApiAI.Command.Command -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: ApiAI.Command.Command ->
+                 ApiAI.Command.$fShowCommand_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+964b4b78bcdcd005272fc99a5a01c8f8
+  $fShowCommand_$cshowList ::
+    [ApiAI.Command.Command] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ApiAI.Command.Command
+                   ApiAI.Command.$fShowCommand1) -}
+964b4b78bcdcd005272fc99a5a01c8f8
+  $fShowCommand_$cshowsPrec ::
+    GHC.Types.Int -> ApiAI.Command.Command -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: ApiAI.Command.Command
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { ApiAI.Command.Command ww3 ->
+                 ApiAI.Command.$w$cshowsPrec ww1 ww3 w2 } }) -}
+671d0fdb365cd99af6f5c770b9d3443e
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <L,U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Base.String
+                   w :: GHC.Base.String ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ApiAI.Command.$fShowCommand2
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           GHC.Show.shows6
+                           (GHC.Show.showLitString
+                              ww1
+                              (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)))
                    GHC.Types.True
-                   ipv }) -}
-4625de8ec828c0b087df0206e6fbb17c
-  main2 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1,
-     Unfolding: (GHC.TopHandler.runMainIO1
-                   @ ()
-                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           ApiAI.Command.$fShowCommand2
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              GHC.Show.shows6
+                              (GHC.Show.showLitString
+                                 ww1
+                                 (GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.shows6
+                                    (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w))))) }) -}
+964b4b78bcdcd005272fc99a5a01c8f8
+  data Command = Command GHC.Base.String
+c567dbc821126cc8aa9c63bba8e6d1ea
+  toCommand :: ApiAI.Response.AIResponse -> ApiAI.Command.Command
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <L,1*U(A,A,1*U(A,A,A,1*U,A,A,A,A,A),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ res :: ApiAI.Response.AIResponse ->
+                 ApiAI.Command.Command
+                   (case res of wild { ApiAI.Response.AIResponse ds1 ds2 ds3 ds4 ->
+                    case ds3 of wild1 { ApiAI.Response.AIResult ds7 ds8 ds9 ds10 ds5 ds6 ds11 ds12 ds13 ->
+                    ds10 } })) -}
+instance GHC.Show.Show [ApiAI.Command.Command]
+  = ApiAI.Command.$fShowCommand
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

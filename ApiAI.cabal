@@ -16,7 +16,8 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     ApiAI
-  other-modules:       ApiAI.Entity
+  other-modules:       ApiAI.Command, 
+                       ApiAI.Entity
                         ApiAI.Entry,
                         ApiAI.Request,
                         ApiAI.Resampler,
