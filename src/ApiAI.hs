@@ -1,4 +1,4 @@
-module ApiAI 
+module ApiAI
     ( module ApiAI.TextRequest,
       module ApiAI.Request,
       module ApiAI.Resampler,
@@ -17,6 +17,3 @@ import ApiAI.Request
 import ApiAI.Entry
 import ApiAI.Entity
 import ApiAI.Command
-
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"

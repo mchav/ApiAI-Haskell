@@ -13,26 +13,28 @@ import qualified Data.HashMap.Strict as HM
 import Data.Scientific
 import GHC.Generics
 
---data 
+--data
 
 type ActionParameter = HM.HashMap String String
 
-data AIResponse = AIResponse { responseId :: String
-                         , timestamp :: String
-                         , result :: AIResult
-                         , status :: Status
-                         } deriving (Generic, ToJSON, Show)
+data AIResponse = AIResponse
+  { responseId :: String
+  , timestamp :: String
+  , result :: AIResult
+  , status :: Status
+  } deriving (Generic, ToJSON, Show)
 
-data AIResult = AIResult { source :: String
-                     , resolvedQuery :: String
-                     , score :: Maybe Scientific
-                     , action :: String
-                     , actionIncomplete :: Maybe Bool
-                     , parameters :: Maybe Object
-                     , contexts :: Maybe [Context]
-                     , fulfillment :: Fulfillment
-                     , metadata :: Metadata
-                     } deriving (Generic, Show, ToJSON, FromJSON)
+data AIResult = AIResult
+  { source :: String
+  , resolvedQuery :: String
+  , score :: Maybe Scientific
+  , action :: String
+  , actionIncomplete :: Maybe Bool
+  , parameters :: Maybe Object
+  , contexts :: Maybe [Context]
+  , fulfillment :: Fulfillment
+  , metadata :: Metadata
+  } deriving (Generic, Show, ToJSON, FromJSON)
 
 instance FromJSON AIResponse where
     parseJSON (Object o) = do
