@@ -1,4 +1,6 @@
 import ApiAI
 
 main :: IO ()
-main = print myRequest
+main = do
+    myresponse <- withClient testClient myRequest
+    print myresponse

@@ -16,6 +16,14 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     ApiAI
+  other-modules:       ApiAI.Entity
+                        ApiAI.Entry,
+                        ApiAI.Request,
+                        ApiAI.Resampler,
+                        ApiAI.Response,
+                        ApiAI.TextRequest,
+                        ApiAI.VAD,
+                        ApiAI.VoiceRequest
   build-depends:       base >= 4.7 && < 5,
                        http-client,
                        aeson,

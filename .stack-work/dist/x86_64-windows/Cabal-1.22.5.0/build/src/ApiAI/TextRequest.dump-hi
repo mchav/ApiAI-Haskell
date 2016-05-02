@@ -1,0 +1,921 @@
+
+==================== FINAL INTERFACE ====================
+2016-05-02 02:37:04.9304854 UTC
+
+interface ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.TextRequest 7103
+  interface hash: 592a01984f85db03e5098c9a8871c22d
+  ABI hash: 50b7c4a77ec04e36762e6a3019b2b998
+  export-list hash: f6d05ad171c6005f3916400655b71b2f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 2581f8c21c2f4f078d8d59a1fcc9c3fc
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ApiAI.TextRequest.baseURL
+  ApiAI.TextRequest.buildAIRequest
+  ApiAI.TextRequest.client
+  ApiAI.TextRequest.myRequest
+  ApiAI.TextRequest.parseAIResponse
+  ApiAI.TextRequest.processTextRequest
+  ApiAI.TextRequest.testClient
+  ApiAI.TextRequest.withClient
+  ApiAI.TextRequest.Client{ApiAI.TextRequest.Client ApiAI.TextRequest.accessToken ApiAI.TextRequest.subscriptionKey}
+  ApiAI.TextRequest.TextRequest{ApiAI.TextRequest.TextRequest ApiAI.TextRequest.confidence ApiAI.TextRequest.context ApiAI.TextRequest.entities ApiAI.TextRequest.lang ApiAI.TextRequest.query ApiAI.TextRequest.resetContext ApiAI.TextRequest.sessionId ApiAI.TextRequest.timezone ApiAI.TextRequest.v}
+module dependencies: ApiAI.Response
+package dependencies: RSA-2.2.0@RSA_3U8sjHt7X6t2nctk1xSLNR
+                      SHA-1.6.4.2@SHA_1Ie52ZlfV7U5JkpNNWW6Sr
+                      StateVar-1.1.0.3@State_8WYLUQJECQz8PFb9p2aPSq
+                      Win32-2.3.1.0@Win32_ELFLzTRksT8Dql3wobiWvb
+                      adjunctions-4.3@adjun_FnggEBZeqAH5GVhendI1Qt
+                      aeson-0.9.0.1@aeson_4EClaYzOpikBXlqyWRrOTs
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      asn1-encoding-0.9.3@asn1e_9yYXVsoIESCExOKNvbh7gx
+                      asn1-parse-0.9.4@asn1p_LFHbOgLsykk9KayBmlmMyu
+                      asn1-types-0.3.2@asn1t_4USXeLsiWkQBWUbOlkmyZ7
+                      async-2.1.0@async_KuqnF1GrhHK5nNp6Zzm3jy
+                      attoparsec-0.13.0.1@attop_KGz8kXnHawX2yTRIBzGnQa
+                      authenticate-oauth-1.5.1.1@authe_JQ9K77NK3Le9bykRS7Zzhu
+                      base-4.8.2.0 base16-bytestring-0.1.1.6@base1_LuxBhYgEONMHJnKTOPc7Oy
+                      base64-bytestring-1.0.0.1@base6_AkCk8zInckjJsyQ4AIFHPN
+                      base-orphans-0.5.3@baseo_4lH3gPOjJvdDgDLhAat0cc
+                      bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy
+                      binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      blaze-builder-0.4.0.1@blaze_GoSGMrJXTmeEBoF3sgxwrM
+                      byteable-0.1.1@bytea_38yjJsjDRm9KusCn8Yo4aB
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      case-insensitive-1.2.0.5@casei_DNSVdyEjyyl9Og6G8xHN9C
+                      cereal-0.5.1.0@cerea_843xOxvPj94HAJ9SD4EJuq
+                      comonad-4.2.7.2@comon_5qeChR15Lof7NNbydPaT4m
+                      connection-0.2.5@conne_2L0UU9MlnEh2IDop7hCsOg
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      contravariant-1.4@contr_IN134AzHInMDWXSWYnSH9n
+                      cookie-0.4.1.6@cooki_HickpbAmDQBEuKCPRWZfTY
+                      cryptonite-0.10@crypt_0KxeGur2F1dHYkX2RiIjMt
+                      cryptohash-0.11.6@crypt_3Cwvwq9ssRY1dmVI1qI6C2
+                      crypto-api-0.13.2@crypt_3h2ZoigsAIU7B18hoJy00H
+                      crypto-pubkey-types-0.4.3@crypt_Fbz7FID2nEvFbOth0vBHYx
+                      data-default-instances-base-0.0.1@datad_Bh5w1rt638k3gekgUnZ9Qe
+                      data-default-0.5.3@datad_DLQPsKM7BNMFfKH45X8LEe
+                      data-default-instances-dlist-0.0.1@datad_IV2dTGx3Pj09NowR0FWGzk
+                      data-default-instances-containers-0.0.1@datad_IvTKAI579b047LLJfQOYbY
+                      data-default-class-0.0.1@datad_K91y8NcZUJI9yaBI61rgdD
+                      data-default-instances-old-locale-0.0.1@datad_LQTewb1b5hK22W4h2rIWVQ
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      distributive-0.5.0.2@distr_CdoGNL0xpvT8Yg8UOP51Po
+                      dlist-0.7.1.2@dlist_AO7XAasbAeyL0XLKeq1Aui
+                      entropy-0.3.7@entro_EWh32pHo6ClFU85Pc5o5Zm
+                      exceptions-0.8.2.1@excep_6lgwjdgwblY7rzh5s6SLd8
+                      filepath-1.4.0.0@filep_Ey7a1in9roBAE8bUFJ5R9m
+                      free-4.12.4@free_Fg3Rr4IzlDlJsI6IyalP8a ghc-prim-0.4.0.0
+                      hashable-1.2.4.0@hasha_8GjadD03dR57AKCJdr90LD
+                      hourglass-0.2.10@hourg_HFrzgdy3XAO4CeuZrIgRVg
+                      http-client-tls-0.2.2@httpc_DzPspby7la01XAS3BAKuh7
+                      http-client-0.4.27@httpc_Gpxx0SIAljHCwseG8G0ap9
+                      http-types-0.9@httpt_3Bf1bEHnPYIAJ2rfQRlloD integer-gmp-1.0.0.0
+                      kan-extensions-4.2.3@kanex_24gxZHVjHcBCVT8GyXNL3z
+                      lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6
+                      memory-0.11@memor_0EiEBIg44i8KGjAeoKnPDs
+                      mime-types-0.1.0.6@mimet_Auf3arlsqyh1vk2EtUPwQu
+                      mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8
+                      network-uri-2.6.0.3@netwo_B6cnyX3vwvIANPyGOhBaPA
+                      network-2.6.2.1@netwo_JvRqUnCVngAETdubChvApm
+                      old-locale-1.0.0.7@oldlo_7h2Gx6mVPJ5Gheca8j9Mpe
+                      parsec-3.1.9@parse_EE5NO1mlYLh4J8mgDEshNv
+                      pem-0.2.2@pem_68T9LQQkAB02O0OO4VHaxc
+                      prelude-extras-0.4.0.3@prelu_1gQpKVfMHul71LsAFgGRhv
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      profunctors-5.2@profu_AyfX2TwiUwMAATZoBIpOj1
+                      pureMD5-2.1.2.1@pureM_LoimZeM8323Eo4VcBbnX04
+                      random-1.1@rando_7Qv4dDT5WBF9U3tMWkytIb
+                      reflection-2.1.2@refle_Is9SiIf9zRHG2wDNDxPaS9
+                      scientific-0.3.4.4@scien_AqBmwDfwK7K24A70hu3AxF
+                      semigroupoids-5.0.1@semig_2qS8DPp0vFk7Ut5T9drd0O
+                      semigroups-0.18.1@semig_H2hg0TRK56868o42AJ7WhP
+                      socks-0.5.4@socks_K3jQXPlF70dBRLjgR7WTcl
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD
+                      streaming-commons-0.1.15.2@strea_40D9AIOdJWnGnE62wgX9j9
+                      tagged-0.8.3@tagge_5cptKNCoGdxJM6eqqNERxD template-haskell-2.10.0.0
+                      text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
+                      time-1.5.0.1@time_IYbjC7tGONY15oDy1fGJKz
+                      time-locale-compat-0.1.1.1@timel_CVx5rIGuqIp24PzQC7WK9G
+                      tls-1.3.4@tls_2q27bqobQuwKIddo83JCeX
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      unordered-containers-0.2.5.1@unord_8BVO2aaPxdK7U6ObhjDGGE
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+                      wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM
+                      x509-1.6.3@x509_Ch2ub8Mj4Dm3mPLNcdCV24
+                      x509-system-1.6.3@x509s_BZXzdmlE5vELt6c41jmtRd
+                      x509-store-1.6.1@x509s_Iq10fysypmw0UAF1QiPgsZ
+                      x509-validation-1.6.3@x509v_C6l9ULO9Hu91r64oyaYKvO
+                      zlib-0.6.1.1@zlib_7LjT7TSHX8U3VTy3t378Vu
+orphans: RSA-2.2.0@RSA_3U8sjHt7X6t2nctk1xSLNR:Codec.Crypto.RSA.Pure
+         aeson-0.9.0.1@aeson_4EClaYzOpikBXlqyWRrOTs:Data.Aeson.Types.Generic
+         aeson-0.9.0.1@aeson_4EClaYzOpikBXlqyWRrOTs:Data.Aeson.Types.Instances
+         attoparsec-0.13.0.1@attop_KGz8kXnHawX2yTRIBzGnQa:Data.Attoparsec.ByteString.Char8
+         base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         base-orphans-0.5.3@baseo_4lH3gPOjJvdDgDLhAat0cc:Data.Orphans
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         crypto-api-0.13.2@crypt_3h2ZoigsAIU7B18hoJy00H:Crypto.Classes
+         data-default-instances-base-0.0.1@datad_Bh5w1rt638k3gekgUnZ9Qe:Data.Default.Instances.Base
+         data-default-instances-dlist-0.0.1@datad_IV2dTGx3Pj09NowR0FWGzk:Data.Default.Instances.DList
+         data-default-instances-containers-0.0.1@datad_IvTKAI579b047LLJfQOYbY:Data.Default.Instances.Containers
+         data-default-instances-old-locale-0.0.1@datad_LQTewb1b5hK22W4h2rIWVQ:Data.Default.Instances.OldLocale
+         hashable-1.2.4.0@hasha_8GjadD03dR57AKCJdr90LD:Data.Hashable.Generic
+         http-client-0.4.27@httpc_Gpxx0SIAljHCwseG8G0ap9:Network.HTTP.Client.Request
+         network-2.6.2.1@netwo_JvRqUnCVngAETdubChvApm:Network.Socket
+         network-2.6.2.1@netwo_JvRqUnCVngAETdubChvApm:Network.Socket.Types
+         reflection-2.1.2@refle_Is9SiIf9zRHG2wDNDxPaS9:Data.Reflection
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Show
+         time-1.5.0.1@time_IYbjC7tGONY15oDy1fGJKz:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_IYbjC7tGONY15oDy1fGJKz:Data.Time.Format.Parse
+         time-1.5.0.1@time_IYbjC7tGONY15oDy1fGJKz:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+         wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM:Network.Wreq.Types
+family instance modules: ApiAI-0.1.0.0@ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.Response
+                         adjunctions-4.3@adjun_FnggEBZeqAH5GVhendI1Qt:Data.Functor.Rep
+                         attoparsec-0.13.0.1@attop_KGz8kXnHawX2yTRIBzGnQa:Data.Attoparsec.Internal.Types
+                         base-4.8.2.0:Control.Applicative base-4.8.2.0:Data.Either
+                         base-4.8.2.0:Data.Functor.Identity base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:Data.Void
+                         base-4.8.2.0:GHC.Exts base-4.8.2.0:GHC.Generics
+                         base-4.8.2.0:GHC.TypeLits
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Biff
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Clown
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Flip
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Join
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Joker
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Product
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Sum
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Tannen
+                         bifunctors-5.2@bifun_60nWXka2lVp0gdaEG5UJyy:Data.Bifunctor.Wrapped
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         dlist-0.7.1.2@dlist_AO7XAasbAeyL0XLKeq1Aui:Data.DList
+                         http-client-0.4.27@httpc_Gpxx0SIAljHCwseG8G0ap9:Network.HTTP.Client
+                         kan-extensions-4.2.3@kanex_24gxZHVjHcBCVT8GyXNL3z:Data.Functor.Yoneda
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.At
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Internal.Indexed
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Internal.Zoom
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Reified
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Tuple
+                         lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Wrapped
+                         network-uri-2.6.0.3@netwo_B6cnyX3vwvIANPyGOhBaPA:Network.URI
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         profunctors-5.2@profu_AyfX2TwiUwMAATZoBIpOj1:Data.Profunctor.Rep
+                         semigroups-0.18.1@semig_H2hg0TRK56868o42AJ7WhP:Data.List.NonEmpty
+                         semigroups-0.18.1@semig_H2hg0TRK56868o42AJ7WhP:Data.Semigroup
+                         tagged-0.8.3@tagge_5cptKNCoGdxJM6eqqNERxD:Data.Tagged
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+                         unordered-containers-0.2.5.1@unord_8BVO2aaPxdK7U6ObhjDGGE:Data.HashMap.Base
+                         unordered-containers-0.2.5.1@unord_8BVO2aaPxdK7U6ObhjDGGE:Data.HashSet
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Storable
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+                         zlib-0.6.1.1@zlib_7LjT7TSHX8U3VTy3t378Vu:Codec.Compression.Zlib.Stream
+import  -/  ApiAI.Response 9da422a22c3595b3e6801f2ecb5b1f11
+  exports: 0fcf797c78d7b87b28e0a275f90b7ae5
+  AIResponse 0ce6c3c295624d238d13fa88bb760e4d
+  Context 83efa9e3a45fa46177f90dcc1dc57611
+import  -/  aeson-0.9.0.1@aeson_4EClaYzOpikBXlqyWRrOTs:Data.Aeson 592867bf4d4ef823f2893d5e68236ec6
+import  -/  base-4.8.2.0:Data.Function 6b13a8d3a5e3bd757a91434dce3fc7f3
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:GHC.Base a4939789b2cfd60b36ed163e56a623cd
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 638c10c4fd4901a0aca5b77c9f14123d
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Char8 c6332c35ee60e92d21b8d6be822fc617
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy 381d43ef4fab40c90f7ad267b585f3f2
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Char8 caf675882d13961c08b8e4ef396bdc72
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Internal 53fadf747c97476e546e01c57d904b17
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens 2e66da851105a4ad4759c71ce36ba9a3
+import  -/  lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Getter a070c115903538737d37d747322cf5ca
+import  -/  lens-4.13@lens_IoHyeMf6j3D8TzkwBq6KB6:Control.Lens.Setter debbe862aeedb6be7ac8d0e4013d1f30
+import  -/  scientific-0.3.4.4@scien_AqBmwDfwK7K24A70hu3AxF:Data.Scientific 0b993a61a155928acf152a3290c74655
+import  -/  text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text bf499263e0d506587e6901896448821b
+import  -/  wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM:Network.Wreq e24412989fc59740504a850e58ec5500
+import  -/  wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM:Network.Wreq.Internal cd6c42571eb330011e4d8b3ead430b53
+import  -/  wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM:Network.Wreq.Internal.Types adfbc692c94916c8348eb0b1f2e2e0aa
+import  -/  wreq-0.4.1.0@wreq_IVHgGm9hguD0BbwSRzpFUM:Network.Wreq.Lens 017a8f4dbd51ef29fcc2e3e76feafd47
+19fafee8095ede1bc2bcf76daec59d91
+  $fEqClient :: GHC.Classes.Eq ApiAI.TextRequest.Client
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ApiAI.TextRequest.Client
+                  ApiAI.TextRequest.$fEqClient_$c==
+                  ApiAI.TextRequest.$fEqClient_$c/= -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fEqClient_$c/= ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.Client -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: ApiAI.TextRequest.Client w1 :: ApiAI.TextRequest.Client ->
+                 case w of ww { ApiAI.TextRequest.Client ww1 ww2 ->
+                 case w1 of ww3 { ApiAI.TextRequest.Client ww4 ww5 ->
+                 ApiAI.TextRequest.$w$c/= ww1 ww2 ww4 ww5 } }) -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fEqClient_$c== ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.Client -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SL),1*U(1*U,1*U)><S(SL),1*U(1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: ApiAI.TextRequest.Client w1 :: ApiAI.TextRequest.Client ->
+                 case w of ww { ApiAI.TextRequest.Client ww1 ww2 ->
+                 case w1 of ww3 { ApiAI.TextRequest.Client ww4 ww5 ->
+                 ApiAI.TextRequest.$w$c== ww1 ww2 ww4 ww5 } }) -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fShowClient :: GHC.Show.Show ApiAI.TextRequest.Client
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ApiAI.TextRequest.Client
+                  ApiAI.TextRequest.$fShowClient_$cshowsPrec
+                  ApiAI.TextRequest.$fShowClient_$cshow
+                  ApiAI.TextRequest.$fShowClient_$cshowList -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fShowClient1 :: ApiAI.TextRequest.Client -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ w :: ApiAI.TextRequest.Client
+                   w1 :: GHC.Base.String ->
+                 case w of ww { ApiAI.TextRequest.Client ww1 ww2 ->
+                 ApiAI.TextRequest.$w$cshowsPrec 0 ww1 ww2 w1 }) -}
+3c5905a72b63db660735279a31ddffbb
+  $fShowClient2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+3509d6555b7b13f6318a6888a5bec1ff
+  $fShowClient3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "subscriptionKey = "#) -}
+66d7896422c45af05d47640c683600fe
+  $fShowClient4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+56f2912e836557ffcf104da4ce2d502b
+  $fShowClient5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "accessToken = "#) -}
+0e29feec26373b4188bcc82892688408
+  $fShowClient6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Client {"#) -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fShowClient_$cshow :: ApiAI.TextRequest.Client -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: ApiAI.TextRequest.Client ->
+                 ApiAI.TextRequest.$fShowClient_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fShowClient_$cshowList ::
+    [ApiAI.TextRequest.Client] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ApiAI.TextRequest.Client
+                   ApiAI.TextRequest.$fShowClient1) -}
+19fafee8095ede1bc2bcf76daec59d91
+  $fShowClient_$cshowsPrec ::
+    GHC.Types.Int -> ApiAI.TextRequest.Client -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S,1*U(U)><S,1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: ApiAI.TextRequest.Client
+                   w2 :: GHC.Base.String ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { ApiAI.TextRequest.Client ww3 ww4 ->
+                 ApiAI.TextRequest.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  $fShowTextRequest :: GHC.Show.Show ApiAI.TextRequest.TextRequest
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ApiAI.TextRequest.TextRequest
+                  ApiAI.TextRequest.$fShowTextRequest_$cshowsPrec
+                  ApiAI.TextRequest.$fShowTextRequest_$cshow
+                  ApiAI.TextRequest.$fShowTextRequest_$cshowList -}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  $fShowTextRequest1 ::
+    ApiAI.TextRequest.TextRequest -> GHC.Show.ShowS
+  {- Arity: 1,
+     Unfolding: (\ w :: ApiAI.TextRequest.TextRequest ->
+                 case w of ww { ApiAI.TextRequest.TextRequest ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ->
+                 ApiAI.TextRequest.$w$cshowsPrec1
+                   0
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9 }) -}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  $fShowTextRequest_$cshow ::
+    ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(U,U,1*U,U,U,1*U,1*U,1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: ApiAI.TextRequest.TextRequest ->
+                 ApiAI.TextRequest.$fShowTextRequest_$cshowsPrec
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  $fShowTextRequest_$cshowList ::
+    [ApiAI.TextRequest.TextRequest] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ApiAI.TextRequest.TextRequest
+                   ApiAI.TextRequest.$fShowTextRequest1) -}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  $fShowTextRequest_$cshowsPrec ::
+    GHC.Types.Int -> ApiAI.TextRequest.TextRequest -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(U)><S,1*U(U,U,1*U,U,U,1*U,1*U,1*U,1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: ApiAI.TextRequest.TextRequest ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { ApiAI.TextRequest.TextRequest ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ->
+                 ApiAI.TextRequest.$w$cshowsPrec1
+                   ww1
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8
+                   ww9
+                   ww10
+                   ww11 } }) -}
+c96be664659a35ded8e0dd21cc4b9922
+  $w$c/= ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Base.String
+                   ww1 :: GHC.Base.String
+                   ww2 :: GHC.Base.String
+                   ww3 :: GHC.Base.String ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Base.eqString ww1 ww3 of wild1 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } }) -}
+3de23fff8f173a42e5940c9f9f8166c1
+  $w$c== ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Base.String
+                   ww1 :: GHC.Base.String
+                   ww2 :: GHC.Base.String
+                   ww3 :: GHC.Base.String ->
+                 case GHC.Base.eqString ww ww2 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True -> GHC.Base.eqString ww1 ww3 }) -}
+3ec297d72ed44c7d42c44332bde6ca34
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <L,U><L,1*U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Int#
+                   ww1 :: GHC.Base.String
+                   ww2 :: GHC.Base.String
+                   w :: GHC.Base.String ->
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ x :: GHC.Base.String[OneShot] ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       ApiAI.TextRequest.$fShowClient6
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          ApiAI.TextRequest.$fShowClient5
+                          (GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows6
+                             (GHC.Show.showLitString
+                                ww1
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Base.++
+                                      @ GHC.Types.Char
+                                      ApiAI.TextRequest.$fShowClient4
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         ApiAI.TextRequest.$fShowClient3
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows6
+                                            (GHC.Show.showLitString
+                                               ww2
+                                               (GHC.Types.:
+                                                  @ GHC.Types.Char
+                                                  GHC.Show.shows6
+                                                  (GHC.Base.++
+                                                     @ GHC.Types.Char
+                                                     ApiAI.TextRequest.$fShowClient2
+                                                     x))))))))))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11) of wild {
+                   GHC.Types.False -> p w
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows9
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows8 w)) }) -}
+fed9a39b5a5d5a0509ffeb01f4847b33
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.Maybe Data.Scientific.Scientific
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Base.Maybe [ApiAI.Response.Context]
+    -> GHC.Base.Maybe GHC.Types.Bool
+    -> GHC.Base.Maybe [GHC.Base.String]
+    -> GHC.Base.Maybe GHC.Base.String
+    -> GHC.Show.ShowS
+  {- Arity: 10,
+     Strictness: <L,U><L,U><L,U><L,1*U><L,U><L,U><L,1*U><L,1*U><L,1*U><L,1*U>,
+     Inline: [0] -}
+a8634d516f5dc8e9b82831e95fa14222
+  $wbuildAIRequest ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.TextRequest
+    -> (# Network.Wreq.Internal.Types.Mgr,
+          GHC.Base.Maybe Network.HTTP.Client.Types.Proxy,
+          GHC.Base.Maybe Network.Wreq.Internal.Types.Auth,
+          [Network.HTTP.Types.Header.Header],
+          [(Data.Text.Internal.Text, Data.Text.Internal.Text)],
+          GHC.Types.Int,
+          GHC.Base.Maybe Network.HTTP.Client.Types.CookieJar,
+          GHC.Base.Maybe Network.Wreq.Internal.Types.StatusChecker #)
+  {- Arity: 2,
+     Strictness: <L,U(1*U,1*U)><L,U(1*U,1*U,A,1*U,1*U,A,A,A,A)>,
+     Inline: [0] -}
+82d212e6a32a3b499359dd49728abef4
+  $wparseAIResponse ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> ApiAI.Response.AIResponse
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0],
+     Unfolding: (\ ww :: Data.ByteString.Lazy.Internal.ByteString ->
+                 case ww of wild {
+                   Data.ByteString.Lazy.Internal.Empty
+                   -> case ApiAI.TextRequest.parseAIResponse2 of wild1 {
+                        Data.Attoparsec.ByteString.Lazy.Fail ipv ipv1 ipv2
+                        -> ApiAI.TextRequest.parseAIResponse1
+                        Data.Attoparsec.ByteString.Lazy.Done ds v1
+                        -> case (ApiAI.Response.$fFromJSONAIResponse_$cparseJSON v1)
+                                  `cast`
+                                (Data.Aeson.Types.Internal.NTCo:Parser[0]
+                                     <ApiAI.Response.AIResponse>_R)
+                                  @ Data.Aeson.Types.Internal.Result
+                                  @ ApiAI.Response.AIResponse
+                                  (Data.Aeson.Types.Internal.Error @ ApiAI.Response.AIResponse)
+                                  (Data.Aeson.Types.Internal.Success
+                                     @ ApiAI.Response.AIResponse) of wild2 {
+                             Data.Aeson.Types.Internal.Error ipv
+                             -> ApiAI.TextRequest.parseAIResponse1
+                             Data.Aeson.Types.Internal.Success a41 -> a41 } }
+                   Data.ByteString.Lazy.Internal.Chunk dt dt1 dt2 dt3 xs
+                   -> case Data.Attoparsec.ByteString.Lazy.parse_go
+                             @ Data.Aeson.Types.Internal.Value
+                             (Data.Aeson.Parser.Internal.$wa3
+                                @ Data.Aeson.Types.Internal.Value
+                                dt
+                                dt1
+                                dt2
+                                dt3
+                                dt3
+                                0
+                                0
+                                Data.Attoparsec.Internal.Types.Incomplete
+                                (Data.Attoparsec.ByteString.Internal.failK
+                                   @ Data.Aeson.Types.Internal.Value)
+                                  `cast`
+                                (Sub (Sym (Data.Attoparsec.Internal.Types.TFCo:R:StateByteString[0]))
+                                 ->_R <Data.Attoparsec.Internal.Types.Pos
+                                       -> Data.Attoparsec.Internal.Types.More
+                                       -> [GHC.Base.String]
+                                       -> GHC.Base.String
+                                       -> Data.Attoparsec.Internal.Types.IResult
+                                            Data.ByteString.Internal.ByteString
+                                            Data.Aeson.Types.Internal.Value>_R)
+                                (Data.Attoparsec.ByteString.Internal.successK
+                                   @ Data.Aeson.Types.Internal.Value)
+                                  `cast`
+                                (Sub (Sym (Data.Attoparsec.Internal.Types.TFCo:R:StateByteString[0]))
+                                 ->_R <Data.Attoparsec.Internal.Types.Pos
+                                       -> Data.Attoparsec.Internal.Types.More
+                                       -> Data.Aeson.Types.Internal.Value
+                                       -> Data.Attoparsec.Internal.Types.IResult
+                                            Data.ByteString.Internal.ByteString
+                                            Data.Aeson.Types.Internal.Value>_R))
+                             xs of wild1 {
+                        Data.Attoparsec.ByteString.Lazy.Fail ipv ipv1 ipv2
+                        -> ApiAI.TextRequest.parseAIResponse1
+                        Data.Attoparsec.ByteString.Lazy.Done ds v1
+                        -> case (ApiAI.Response.$fFromJSONAIResponse_$cparseJSON v1)
+                                  `cast`
+                                (Data.Aeson.Types.Internal.NTCo:Parser[0]
+                                     <ApiAI.Response.AIResponse>_R)
+                                  @ Data.Aeson.Types.Internal.Result
+                                  @ ApiAI.Response.AIResponse
+                                  (Data.Aeson.Types.Internal.Error @ ApiAI.Response.AIResponse)
+                                  (Data.Aeson.Types.Internal.Success
+                                     @ ApiAI.Response.AIResponse) of wild2 {
+                             Data.Aeson.Types.Internal.Error ipv
+                             -> ApiAI.TextRequest.parseAIResponse1
+                             Data.Aeson.Types.Internal.Success a41 -> a41 } } }) -}
+19fafee8095ede1bc2bcf76daec59d91
+  data Client
+    = Client {accessToken :: GHC.Base.String,
+              subscriptionKey :: GHC.Base.String}
+cf8b5ddd6fe2311cd2deb95a44bd90c1
+  data TextRequest
+    = TextRequest {query :: GHC.Base.String,
+                   v :: GHC.Base.String,
+                   confidence :: GHC.Base.Maybe Data.Scientific.Scientific,
+                   sessionId :: GHC.Base.String,
+                   lang :: GHC.Base.String,
+                   context :: GHC.Base.Maybe [ApiAI.Response.Context],
+                   resetContext :: GHC.Base.Maybe GHC.Types.Bool,
+                   entities :: GHC.Base.Maybe [GHC.Base.String],
+                   timezone :: GHC.Base.Maybe GHC.Base.String}
+3814b41831fe91b87a6e44eee550fbfd
+  accessToken :: ApiAI.TextRequest.Client -> GHC.Base.String
+  RecSel ApiAI.TextRequest.Client
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.Client ->
+                 case ds of wild { ApiAI.TextRequest.Client ds1 ds2 -> ds1 }) -}
+7256b0ce80d77d2ee5774b9e219bbc79
+  baseURL :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "https://api.api.ai/v1/query?"#) -}
+e8e4836e6f715748e3ad6f489761e55d
+  buildAIRequest ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.TextRequest
+    -> Network.Wreq.Internal.Types.Options
+  {- Arity: 2,
+     Strictness: <L,U(1*U,1*U)><L,U(1*U,1*U,A,1*U,1*U,A,A,A,A)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: ApiAI.TextRequest.Client
+                   w1 :: ApiAI.TextRequest.TextRequest ->
+                 case ApiAI.TextRequest.$wbuildAIRequest
+                        w
+                        w1 of ww { (#,,,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 Network.Wreq.Internal.Types.Options
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   ww5
+                   ww6
+                   ww7
+                   ww8 }) -}
+0a95a757fc648a6c1e9282f9d25c40bf
+  client ::
+    GHC.Base.String -> GHC.Base.String -> ApiAI.TextRequest.Client
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m,
+     Unfolding: InlineRule (0, True, True) ApiAI.TextRequest.Client -}
+88debcc94a6db9bdc619f3e6b1cd3c21
+  confidence ::
+    ApiAI.TextRequest.TextRequest
+    -> GHC.Base.Maybe Data.Scientific.Scientific
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSLLLLLL),1*U(A,A,1*U,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds3 }) -}
+89807e82c11cc48f37caa60060dd1c97
+  context ::
+    ApiAI.TextRequest.TextRequest
+    -> GHC.Base.Maybe [ApiAI.Response.Context]
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLSLLL),1*U(A,A,A,A,A,1*U,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds6 }) -}
+327074aafb6f0687a687482184927587
+  entities ::
+    ApiAI.TextRequest.TextRequest -> GHC.Base.Maybe [GHC.Base.String]
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLSL),1*U(A,A,A,A,A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds8 }) -}
+554dc02c2ebefd36ab0629004e6dec61
+  lang :: ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLSLLLL),1*U(A,A,A,A,1*U,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds5 }) -}
+5376d4e3c0efc8cefbf857f68ecf26b2
+  myRequest :: ApiAI.TextRequest.TextRequest
+  {- Strictness: m,
+     Unfolding: (ApiAI.TextRequest.TextRequest
+                   ApiAI.TextRequest.myRequest4
+                   ApiAI.TextRequest.myRequest3
+                   (GHC.Base.Nothing @ Data.Scientific.Scientific)
+                   ApiAI.TextRequest.myRequest2
+                   ApiAI.TextRequest.myRequest1
+                   (GHC.Base.Nothing @ [ApiAI.Response.Context])
+                   (GHC.Base.Nothing @ GHC.Types.Bool)
+                   (GHC.Base.Nothing @ [GHC.Base.String])
+                   (GHC.Base.Nothing @ GHC.Base.String)) -}
+c6732c1058db839e1f5e1f9d97c4668a
+  myRequest1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "en"#) -}
+959059ec0035985cb0eb34e13a7d0c77
+  myRequest2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "1234567890"#) -}
+6016d55ea5675b67bf822ede8347cc8d
+  myRequest3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "20150910"#) -}
+0e4f04613f7ad23b21cbc6ccf904057e
+  myRequest4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "5 + 12"#) -}
+095e7f31d0d20a3bee33d51a6836f413
+  parseAIResponse ::
+    Network.HTTP.Client.Types.Response
+      Data.ByteString.Lazy.Internal.ByteString
+    -> ApiAI.Response.AIResponse
+  {- Arity: 1, Strictness: <S(LLLSLL),1*U(A,A,A,1*U,A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Network.HTTP.Client.Types.Response
+                          Data.ByteString.Lazy.Internal.ByteString ->
+                 case w of ww { Network.HTTP.Client.Types.Response ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 ApiAI.TextRequest.$wparseAIResponse ww4 }) -}
+7ab72f69eb7c5d3741fcd635acdb391f
+  parseAIResponse1 :: ApiAI.Response.AIResponse
+  {- Strictness: b -}
+bb510ebfc9bd0679aeda9b5cbd37022a
+  parseAIResponse2 ::
+    Data.Attoparsec.ByteString.Lazy.Result
+      Data.Aeson.Types.Internal.Value
+  {- Unfolding: (Data.Attoparsec.ByteString.Lazy.parse_$sgo
+                   @ Data.Aeson.Types.Internal.Value
+                   ApiAI.TextRequest.parseAIResponse3) -}
+d235e5a86bd9e924ee2de5bd57dc3e84
+  parseAIResponse3 ::
+    Data.Attoparsec.Internal.Types.IResult
+      Data.ByteString.Internal.ByteString Data.Aeson.Types.Internal.Value
+  {- Unfolding: (Data.Aeson.Parser.Internal.$wa3
+                   @ Data.Aeson.Types.Internal.Value
+                   __NULL
+                   Data.ByteString.Internal.$fMonoidByteString3
+                   0
+                   0
+                   0
+                   0
+                   0
+                   Data.Attoparsec.Internal.Types.Incomplete
+                   (Data.Attoparsec.ByteString.Internal.failK
+                      @ Data.Aeson.Types.Internal.Value)
+                     `cast`
+                   (Sub (Sym (Data.Attoparsec.Internal.Types.TFCo:R:StateByteString[0]))
+                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                          -> Data.Attoparsec.Internal.Types.More
+                          -> [GHC.Base.String]
+                          -> GHC.Base.String
+                          -> Data.Attoparsec.Internal.Types.IResult
+                               Data.ByteString.Internal.ByteString
+                               Data.Aeson.Types.Internal.Value>_R)
+                   (Data.Attoparsec.ByteString.Internal.successK
+                      @ Data.Aeson.Types.Internal.Value)
+                     `cast`
+                   (Sub (Sym (Data.Attoparsec.Internal.Types.TFCo:R:StateByteString[0]))
+                    ->_R <Data.Attoparsec.Internal.Types.Pos
+                          -> Data.Attoparsec.Internal.Types.More
+                          -> Data.Aeson.Types.Internal.Value
+                          -> Data.Attoparsec.Internal.Types.IResult
+                               Data.ByteString.Internal.ByteString
+                               Data.Aeson.Types.Internal.Value>_R)) -}
+712a1071d58e5daa4466b2326d85b9ef
+  processTextRequest ::
+    ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(1*U,U,A,A,A,A,A,A,A)>,
+     Unfolding: (\ textRequest :: ApiAI.TextRequest.TextRequest ->
+                 GHC.CString.unpackAppendCString#
+                   "query="#
+                   (case textRequest of wild { ApiAI.TextRequest.TextRequest ds ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                    GHC.Base.++
+                      @ GHC.Types.Char
+                      ds
+                      (GHC.CString.unpackAppendCString#
+                         "&v="#
+                         (GHC.Base.++
+                            @ GHC.Types.Char
+                            ds1
+                            (GHC.CString.unpackAppendCString#
+                               "&sessionId="#
+                               (GHC.Base.++
+                                  @ GHC.Types.Char
+                                  ds1
+                                  ApiAI.TextRequest.processTextRequest1)))) })) -}
+d5db9fbbdfaec3521ae0a2dd0605241d
+  processTextRequest1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "&lang=en"#) -}
+e87b9d3a6dac12932c8d3713dc2916e5
+  query :: ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLLLLLL),1*U(1*U,A,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds1 }) -}
+db262150b4b2f863f84015d492ab2a48
+  resetContext ::
+    ApiAI.TextRequest.TextRequest -> GHC.Base.Maybe GHC.Types.Bool
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLSLL),1*U(A,A,A,A,A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds7 }) -}
+9bbeab83bf28eaf048d448c2f365694d
+  sessionId :: ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLSLLLLL),1*U(A,A,A,1*U,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds4 }) -}
+2be3293b3efadb4ca82121d821a6d8a9
+  subscriptionKey :: ApiAI.TextRequest.Client -> GHC.Base.String
+  RecSel ApiAI.TextRequest.Client
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.Client ->
+                 case ds of wild { ApiAI.TextRequest.Client ds1 ds2 -> ds2 }) -}
+302418975abdbc0b7de35c4c8c30d741
+  testClient :: ApiAI.TextRequest.Client
+  {- Strictness: m,
+     Unfolding: (ApiAI.TextRequest.Client
+                   ApiAI.TextRequest.testClient2
+                   ApiAI.TextRequest.testClient1) -}
+90c7f1e9a9426be7603162592c0ed3e4
+  testClient1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "ca48a61e-bb0b-4b72-b3e3-68b1969ff80c"#) -}
+8c65fa9807ce34364a5ff36ee0e3b5a7
+  testClient2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "f3cf88fc26b84c65a6cd4123148c6e94"#) -}
+24d5bf2a040aa2764d684f2367e7d4f9
+  timezone ::
+    ApiAI.TextRequest.TextRequest -> GHC.Base.Maybe GHC.Base.String
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLLLLLS),1*U(A,A,A,A,A,A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds9 }) -}
+39d09628d1329cc8b92fa93c4827f1bc
+  v :: ApiAI.TextRequest.TextRequest -> GHC.Base.String
+  RecSel ApiAI.TextRequest.TextRequest
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLLLLLL),1*U(A,1*U,A,A,A,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: ApiAI.TextRequest.TextRequest ->
+                 case ds of wild { ApiAI.TextRequest.TextRequest ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ->
+                 ds2 }) -}
+d98d6d4b17a3f15d72c269b2c8dcc885
+  withClient ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.TextRequest
+    -> GHC.Types.IO ApiAI.Response.AIResponse
+  {- Arity: 3, Strictness: <L,U(U,U)><L,U(U,U,A,U,U,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                ApiAI.TextRequest.withClient1
+                  `cast`
+                (<ApiAI.TextRequest.Client>_R
+                 ->_R <ApiAI.TextRequest.TextRequest>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <ApiAI.Response.AIResponse>_R)) -}
+07dfdcfd188ecb329862e5e7639b042b
+  withClient1 ::
+    ApiAI.TextRequest.Client
+    -> ApiAI.TextRequest.TextRequest
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ApiAI.Response.AIResponse #)
+  {- Arity: 3, Strictness: <L,U(U,U)><L,U(U,U,A,U,U,A,A,A,A)><L,U>,
+     Unfolding: (\ client1 :: ApiAI.TextRequest.Client
+                   textRequest :: ApiAI.TextRequest.TextRequest
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 let {
+                   opts :: Network.Wreq.Internal.Types.Options
+                   = case ApiAI.TextRequest.$wbuildAIRequest
+                            client1
+                            textRequest of ww { (#,,,,,,,#) ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ->
+                     Network.Wreq.Internal.Types.Options
+                       ww1
+                       ww2
+                       ww3
+                       ww4
+                       ww5
+                       ww6
+                       ww7
+                       ww8 }
+                 } in
+                 case Network.Wreq.Internal.emptyMethodWith4
+                        (GHC.Base.returnIO1 @ Network.HTTP.Client.Types.Request)
+                          `cast`
+                        (<Network.HTTP.Client.Types.Request>_R
+                         ->_R Sym (GHC.Types.NTCo:IO[0]
+                                       <Network.HTTP.Client.Types.Request>_R))
+                        opts
+                        ApiAI.TextRequest.baseURL
+                        s of ds { (#,#) ipv ipv1 ->
+                 case opts of wild { Network.Wreq.Internal.Types.Options ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ->
+                 case Network.Wreq.Internal.runIgnore2
+                        @ (Network.HTTP.Client.Types.Response
+                             Data.ByteString.Lazy.Internal.ByteString)
+                        ds1
+                        Network.Wreq.Internal.readResponse1
+                          `cast`
+                        (<Network.HTTP.Client.Types.Response
+                            Network.HTTP.Client.Types.BodyReader>_R
+                         ->_R Sym (GHC.Types.NTCo:IO[0]
+                                       <Network.HTTP.Client.Types.Response
+                                          Data.ByteString.Lazy.Internal.ByteString>_R))
+                        ipv1
+                        ipv of ds11 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        ApiAI.TextRequest.withClient2
+                        GHC.Types.True
+                        ipv2 of ds12 { (#,#) ipv4 ipv5 ->
+                 (# ipv4, ApiAI.TextRequest.parseAIResponse ipv3 #) } } } }) -}
+06080fb4bf51a9ae086a9bd730f6c2dd
+  withClient2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Got request"#) -}
+instance GHC.Classes.Eq [ApiAI.TextRequest.Client]
+  = ApiAI.TextRequest.$fEqClient
+instance GHC.Show.Show [ApiAI.TextRequest.Client]
+  = ApiAI.TextRequest.$fShowClient
+instance GHC.Show.Show [ApiAI.TextRequest.TextRequest]
+  = ApiAI.TextRequest.$fShowTextRequest
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

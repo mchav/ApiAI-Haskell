@@ -2,9 +2,30 @@ Configuring entropy-0.3.7...
 Result of RDRAND Test: True
 Building entropy-0.3.7...
 Preprocessing library entropy-0.3.7...
-[1 of 2] Compiling System.EntropyNix ( System/EntropyNix.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/System/EntropyNix.o )
-[2 of 2] Compiling System.Entropy   ( System/Entropy.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/System/Entropy.o )
+[1 of 2] Compiling System.EntropyWindows ( System\EntropyWindows.hs, .stack-work\dist\x86_64-windows\Cabal-1.22.5.0\build\System\EntropyWindows.o )
+
+System\EntropyWindows.hs:80:1: Warning:
+    the 'stdcall' calling convention is unsupported on this platform,
+    treating as ccall
+    When checking declaration:
+      foreign import stdcall unsafe "static CryptAcquireContextA" c_cryptAcquireCtx
+        :: Ptr Word32 -> CString -> CString -> Word32 -> Word32 -> IO Int32
+
+System\EntropyWindows.hs:82:1: Warning:
+    the 'stdcall' calling convention is unsupported on this platform,
+    treating as ccall
+    When checking declaration:
+      foreign import stdcall unsafe "static CryptGenRandom" c_cryptGenRandom
+        :: Word32 -> Word32 -> Ptr Word8 -> IO Int32
+
+System\EntropyWindows.hs:84:1: Warning:
+    the 'stdcall' calling convention is unsupported on this platform,
+    treating as ccall
+    When checking declaration:
+      foreign import stdcall unsafe "static CryptReleaseContext" c_cryptReleaseCtx
+        :: Word32 -> Word32 -> IO Int32
+[2 of 2] Compiling System.Entropy   ( System\Entropy.hs, .stack-work\dist\x86_64-windows\Cabal-1.22.5.0\build\System\Entropy.o )
 In-place registering entropy-0.3.7...
 Installing library in
-/home/chav/.stack/snapshots/x86_64-linux/lts-5.6/7.10.3/lib/x86_64-linux-ghc-7.10.3/entropy-0.3.7-7gYJ61Ci0NNBp8LB4CGmrG
+C:\Users\mscha\AppData\Roaming\stack\snapshots\x86_64-windows\lts-5.6\7.10.3\lib\x86_64-windows-ghc-7.10.3\entropy-0.3.7-EWh32pHo6ClFU85Pc5o5Zm
 Registering entropy-0.3.7...

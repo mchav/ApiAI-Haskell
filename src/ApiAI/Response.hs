@@ -13,8 +13,7 @@ import qualified Data.HashMap.Strict as HM
 import Data.Scientific
 import GHC.Generics
 
--- curl 'https://api.api.ai/api/query?v=20150910&query=where%20is&lang=en&sessionId=2f3b5c64-se64-42e0-b7ae-c022c5913915&timezone=2016-03-19T00:46:35-0400' -H 'Authorization:Bearer e8efb77e7f5445f5b50613657dd9fcd4' -H 'ocp-apim-subscription-key:ca48a61e-bb0b-4b72-b3e3-68b1969ff80c'
-
+--data 
 
 type ActionParameter = HM.HashMap String String
 
@@ -29,8 +28,8 @@ data AIResult = AIResult { source :: String
                      , score :: Maybe Scientific
                      , action :: String
                      , actionIncomplete :: Maybe Bool
-                     , parameters :: ActionParameter
-                     , contexts :: [Context]
+                     , parameters :: Maybe Object
+                     , contexts :: Maybe [Context]
                      , fulfillment :: Fulfillment
                      , metadata :: Metadata
                      } deriving (Generic, Show, ToJSON, FromJSON)
@@ -82,9 +81,3 @@ instance FromJSON Fulfillment where
 data Metadata = Metadata { intentId :: Maybe String
                          , intentName :: Maybe String
                          } deriving (Generic, Show, ToJSON, FromJSON)
-
-
-main = do
-    fileData <- B.readFile "SampleJSON.txt"
-    let str = maybe (error "Failed to parse JSON") id ((decode fileData) :: Maybe AIResponse)
-    print ((result str))

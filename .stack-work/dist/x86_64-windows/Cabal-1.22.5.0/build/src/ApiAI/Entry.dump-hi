@@ -1,0 +1,34 @@
+
+==================== FINAL INTERFACE ====================
+2016-05-01 20:36:29.3233648 UTC
+
+interface ApiAI_LiGN0ksww6b0KvR3YPyBvy:ApiAI.Entry 7103
+  interface hash: 0075b42df46673c42914be4d03d3f89b
+  ABI hash: 95318f1cc58558b3ba487b0342d17d1d
+  export-list hash: 292236882b963d6361a5277f817d5cdd
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a5168fbb809e1207ebc2807628781641
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ApiAI.Entry.hello2
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+a5995220e5f046780f444c0bc941d8fa
+  hello2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "hello"#) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

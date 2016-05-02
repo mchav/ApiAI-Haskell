@@ -9,8 +9,9 @@ import ApiAI.Response
 import Control.Lens hiding (contexts, Context)
 import Data.Aeson
 import qualified Data.ByteString.Char8 as C
-import Data.ByteString.Lazy.Internal
-import Data.ByteString.Lazy
+import qualified Data.ByteString.Lazy.Char8 as CL
+import qualified Data.ByteString.Lazy.Internal as I
+import qualified Data.ByteString.Lazy as L
 import Data.Scientific
 import qualified Data.Text as T
 import Network.Wreq
@@ -22,6 +23,9 @@ data Client = Client { accessToken :: String
                      , subscriptionKey :: String
                      } deriving (Show, Eq)
 
+
+--parseAIResponse :: Response ByteString -> AIResponse
+parseAIResponse res = maybe (error "Failed to parse JSON") id ((decode $ res ^. responseBody) :: Maybe AIResponse)
 
 testClient = Client { accessToken = "f3cf88fc26b84c65a6cd4123148c6e94"
                     , subscriptionKey = "ca48a61e-bb0b-4b72-b3e3-68b1969ff80c"
@@ -36,10 +40,10 @@ data TextRequest = TextRequest { query :: String
                                , resetContext :: Maybe Bool
                                , entities :: Maybe[String]
                                , timezone :: Maybe String
-                               }
+                               } deriving (Show)
 
 myRequest :: TextRequest
-myRequest = TextRequest { query = "What is your name?", 
+myRequest = TextRequest { query = "5 + 12", 
                           v = "20150910", 
                           confidence = Nothing, 
                           sessionId = "1234567890", 
@@ -48,11 +52,11 @@ myRequest = TextRequest { query = "What is your name?",
                           resetContext = Nothing, 
                           entities = Nothing, 
                           timezone = Nothing
-                        }
+                        } 
 
 processTextRequest :: TextRequest -> String
 processTextRequest textRequest = "query=" ++ (query textRequest) ++ "&"
-                              ++ "v=" ++ (v textRequest) ++ "&"
+                              ++ "v=" ++ (v textRequest) ++ "&" 
                               ++ "sessionId=" ++ (v textRequest) ++ "&"
                               ++ "lang=en"
 
@@ -69,10 +73,9 @@ buildAIRequest client textRequest = defaults & header "Authorization"           
                                            & param  "sessionId"                       .~ [T.pack $ sessionId textRequest]
                                            & param  "lang"                            .~ [T.pack $ lang textRequest]
 
-parseAIResponse :: Response ByteString -> AIResponse
-parseAIResponse x = error "TO DO"
-
-withClient :: Client -> TextRequest -> IO AIResponse
+--withClient :: Client -> TextRequest -> IO AIResponse
 withClient client textRequest = do
                       r <- getWith (buildAIRequest client textRequest) baseURL
+                      putStrLn "Got request"
+                      --CL.putStrLn $ r ^. responseBody
                       return (parseAIResponse r)
