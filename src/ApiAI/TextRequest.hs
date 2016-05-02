@@ -19,45 +19,42 @@ import Data.Aeson (object, (.=), encode)
 
 baseURL = "https://api.api.ai/v1/query?"
 
-data Client = Client { accessToken :: String
-                     , subscriptionKey :: String
-                     } deriving (Show, Eq)
+data Client = Client
+  { accessToken :: String
+  , subscriptionKey :: String
+  } deriving (Show, Eq)
 
+parseAIResponse :: Response L.ByteString -> AIResponse
+parseAIResponse res =
+  maybe (error "Failed to parse JSON") id (decode $ res ^. responseBody)
 
---parseAIResponse :: Response ByteString -> AIResponse
-parseAIResponse res = maybe (error "Failed to parse JSON") id ((decode $ res ^. responseBody) :: Maybe AIResponse)
-
-data TextRequest = TextRequest { query :: String
-                               , v :: String
-                               , confidence :: Maybe Scientific
-                               , sessionId :: String
-                               , lang :: String
-                               , context :: Maybe [Context]
-                               , resetContext :: Maybe Bool
-                               , entities :: Maybe[String]
-                               , timezone :: Maybe String
-                               } deriving (Show)
-
-processTextRequest :: TextRequest -> String
-processTextRequest textRequest = "query=" ++ (query textRequest) ++ "&"
-                              ++ "v=" ++ (v textRequest) ++ "&" 
-                              ++ "sessionId=" ++ (v textRequest) ++ "&"
-                              ++ "lang=en"
-
+data TextRequest = TextRequest
+  { query :: String
+  , v :: String
+  , confidence :: Maybe Scientific
+  , sessionId :: String
+  , lang :: String
+  , context :: Maybe [Context]
+  , resetContext :: Maybe Bool
+  , entities :: Maybe [String]
+  , timezone :: Maybe String
+  } deriving (Show)
 
 client token key = Client { accessToken = token
                           , subscriptionKey = key
                           }
 
 buildAIRequest :: Client -> TextRequest -> Options
-buildAIRequest client textRequest = defaults & header "Authorization"                 .~ [C.pack $ "Bearer " ++ (accessToken client)] 
-                                           & header "ocp-apim-subscription-key"       .~ [C.pack $ subscriptionKey client] 
-                                           & param  "query"                           .~ [T.pack $ query textRequest]
-                                           & param  "v"                               .~ [T.pack $ v textRequest]
-                                           & param  "sessionId"                       .~ [T.pack $ sessionId textRequest]
-                                           & param  "lang"                            .~ [T.pack $ lang textRequest]
+buildAIRequest client textRequest =
+  defaults
+    & header "Authorization"             .~ [C.pack $ "Bearer " ++ (accessToken client)]
+    & header "ocp-apim-subscription-key" .~ [C.pack $ subscriptionKey client]
+    & param  "query"                     .~ [T.pack $ query textRequest]
+    & param  "v"                         .~ [T.pack $ v textRequest]
+    & param  "sessionId"                 .~ [T.pack $ sessionId textRequest]
+    & param  "lang"                      .~ [T.pack $ lang textRequest]
 
---withClient :: Client -> TextRequest -> IO AIResponse
+withClient :: Client -> TextRequest -> IO AIResponse
 withClient client textRequest = do
                       r <- getWith (buildAIRequest client textRequest) baseURL
                       putStrLn "Got request"
